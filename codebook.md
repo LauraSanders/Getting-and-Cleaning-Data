@@ -6,13 +6,13 @@ Additional information about the variables, data and transformations used in the
 
 A full description of the data used in this project can be found at The UCI Machine Learning Repository
 
-Study Design:
+Study Design
 =========================
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-Attribute Information:
+Attribute Information
 =========================
 For each record in the dataset it is provided:
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
@@ -61,60 +61,182 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-timeBodyAcc.XYZ
+Finally the means are created for each of the variables (measurements) that were output in the tidy data set for each subject_ID and activity_Name (which are also still present in the tidy datafile, otherwise you wouldn't know who'ms mean it is).
+The variables are:
 
-timeGravityAcc.XYZ
+subject_ID
 
-timeBodyAccJerk.XYZ
+Activity_Name
 
-timeBodyGyro.XYZ
+timeBodyAcc.mean...X
 
-timeBodyGyroJerk.XYZ
+timeBodyAcc.mean...Y
 
-timeBodyAccMag
+timeBodyAcc.mean...Z
 
-timeGravityAccMag
+timeBodyAcc.std...X
 
-timeBodyAccJerkMag
+timeBodyAcc.std...Y
 
-timeBodyGyroMag
+timeBodyAcc.std...Z
 
-timeBodyGyroJerkMag
+timeGravityAcc.mean...X
 
-frequencyBodyAcc.XYZ
+timeGravityAcc.mean...Y
 
-frequencyBodyAccJerk.XYZ
+timeGravityAcc.mean...Z
 
-frequencyBodyGyro.XYZ
+timeGravityAcc.std...X
 
-frequencyBodyAccMag
+timeGravityAcc.std...Y
 
-frequencyBodyAccJerkMag
+timeGravityAcc.std...Z
 
-frequencyBodyGyroMag
+timeBodyAccJerk.mean...X
 
-frequencyBodyGyroJerkMag
+timeBodyAccJerk.mean...Y
 
-The set of variables that were estimated from these signals are: 
+timeBodyAccJerk.mean...Z
 
-mean(): Mean value
+timeBodyAccJerk.std...X
 
-std(): Standard deviation
+timeBodyAccJerk.std...Y
 
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
+timeBodyAccJerk.std...Z
 
-gravityMean
+timeBodyGyro.mean...X
 
-timeBodyAccMean
+timeBodyGyro.mean...Y
 
-timeBodyAccJerkMean
+timeBodyGyro.mean...Z
 
-timeBodyGyroMean
+timeBodyGyro.std...X
 
-timeBodyGyroJerkMean
+timeBodyGyro.std...Y
 
-The complete list of variables of each feature vector is available in 'features.txt'
+timeBodyGyro.std...Z
 
-In the tidy data set the mean and std is placed after the variable name (excluding XYZ) but before XYZ if available.
+timeBodyGyroJerk.mean...X
 
+timeBodyGyroJerk.mean...Y
+
+timeBodyGyroJerk.mean...Z
+
+timeBodyGyroJerk.std...X
+
+timeBodyGyroJerk.std...Y
+
+timeBodyGyroJerk.std...Z
+
+timeBodyAccMag.mean..
+
+timeBodyAccMag.std..
+
+timeGravityAccMag.mean..
+
+timeGravityAccMag.std..
+
+timeBodyAccJerkMag.mean..
+
+timeBodyAccJerkMag.std..
+
+timeBodyGyroMag.mean..
+
+timeBodyGyroMag.std..
+
+timeBodyGyroJerkMag.mean..
+
+timeBodyGyroJerkMag.std..
+
+frequencyBodyAcc.mean...X
+
+frequencyBodyAcc.mean...Y
+
+frequencyBodyAcc.mean...Z
+
+frequencyBodyAcc.std...X
+
+frequencyBodyAcc.std...Y
+
+frequencyBodyAcc.std...Z
+
+frequencyBodyAcc.meanFreq...X
+
+frequencyBodyAcc.meanFreq...Y
+
+frequencyBodyAcc.meanFreq...Z
+
+frequencyBodyAccJerk.mean...X
+
+frequencyBodyAccJerk.mean...Y
+
+frequencyBodyAccJerk.mean...Z
+
+frequencyBodyAccJerk.std...X
+
+frequencyBodyAccJerk.std...Y
+
+frequencyBodyAccJerk.std...Z
+
+frequencyBodyAccJerk.meanFreq...X
+
+frequencyBodyAccJerk.meanFreq...Y
+
+frequencyBodyAccJerk.meanFreq...Z
+
+frequencyBodyGyro.mean...X
+
+frequencyBodyGyro.mean...Y
+
+frequencyBodyGyro.mean...Z
+
+frequencyBodyGyro.std...X
+
+frequencyBodyGyro.std...Y
+
+frequencyBodyGyro.std...Z
+
+frequencyBodyGyro.meanFreq...X
+
+frequencyBodyGyro.meanFreq...Y
+
+frequencyBodyGyro.meanFreq...Z
+
+frequencyBodyAccMag.mean..
+
+frequencyBodyAccMag.std..
+
+frequencyBodyAccMag.meanFreq..
+
+frequencyBodyAccJerkMag.mean..
+
+frequencyBodyAccJerkMag.std..
+
+frequencyBodyAccJerkMag.meanFreq..
+
+frequencyBodyGyroMag.mean..
+
+frequencyBodyGyroMag.std..
+
+frequencyBodyGyroMag.meanFreq..
+
+frequencyBodyGyroJerkMag.mean..
+
+frequencyBodyGyroJerkMag.std..
+
+frequencyBodyGyroJerkMag.meanFreq..
+
+angle.timeBodyAccMean.gravity.
+
+angle.timeBodyAccJerkMean..gravityMean.
+
+angle.timeBodyGyroMean.gravityMean.
+
+angle.timeBodyGyroJerkMean.gravityMean.
+
+angle.X.gravityMean.
+
+angle.Y.gravityMean.
+
+angle.Z.gravityMean.
 
