@@ -62,34 +62,55 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 timeBodyAcc.XYZ
+
 timeGravityAcc.XYZ
+
 timeBodyAccJerk.XYZ
+
 timeBodyGyro.XYZ
+
 timeBodyGyroJerk.XYZ
+
 timeBodyAccMag
+
 timeGravityAccMag
+
 timeBodyAccJerkMag
+
 timeBodyGyroMag
+
 timeBodyGyroJerkMag
+
 frequencyBodyAcc.XYZ
+
 frequencyBodyAccJerk.XYZ
+
 frequencyBodyGyro.XYZ
+
 frequencyBodyAccMag
+
 frequencyBodyAccJerkMag
+
 frequencyBodyGyroMag
+
 frequencyBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
 mean(): Mean value
+
 std(): Standard deviation
 
 Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
 
 gravityMean
+
 timeBodyAccMean
+
 timeBodyAccJerkMean
+
 timeBodyGyroMean
+
 timeBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
