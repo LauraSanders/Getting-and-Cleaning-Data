@@ -43,11 +43,11 @@ Second only the measurements on the mean and standard deviation are required. Th
 the not needed measurements. This is saved in TotalData_mean_std.
 
 Third the activity names are added to the data set so instead of using just 1 for Walking now you can see Walking in the data set.
-So it is immediately clear what is meant by the variable. This is shown in TotalData_activity
+So it is immediately clear what is meant by the variable. This is shown in TotalData_activity after using the merge function
 
 Fourth the dataset is labelled with correct variable names using make.names and gsub.
 
-Fifth the dataset is extracted using the writetable function and placed in your working directory. The extracted file is named:
+Fifth, the mean is calculated for every measurement left per Activity_Name and subject_ID. This is done using ddply and the result is saved in the variable Total_Data_final. Finally the dataset is extracted using the writetable function and placed in your working directory. The extracted file is named:
 Tidy_data.txt
 
 
