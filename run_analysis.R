@@ -31,7 +31,7 @@ colnames(Activity_Type)<-c("Activity_ID","Activity_Name")
 #merge all data into 1 datasete
 TotalData<-cbind(X_train_test,Y_train_test,Subject_train_test)
 
-#Step2: Extract only the measurements on the mean and standard deviation for each measurement
+#Step2: Extract only the measurements on the mean and standard deviation for each measurement (including meanfreq measurements)
 
 TotalData_mean_std<-TotalData[,grep("mean|std|activity_ID|subject_ID",names(TotalData))]
 
@@ -41,6 +41,7 @@ TotalData_activity<-merge(TotalData_mean_std,Activity_Type,by.x="activity_ID",by
 
 #Step4: Appropriately labels the data set with descriptive variable names.
 names(TotalData_activity) <- make.names(names(TotalData_activity))
+colnames(TotalData_activity)<- gsub("BodyBody","Body",names(TotalData_activity))
 
 #Step5: create a second, independent tidy data set with the average of 
 #each variable for each activity and each subject.
@@ -51,3 +52,4 @@ TotalData_activity1<-TotalData_activity[,!(names(TotalData_activity) %in% drop)]
 Total_Data_final <- ddply(TotalData_activity1, c("subject_ID","Activity_Name"), numcolwise(mean))
 
 write.table(Total_Data_final, file = "Tidy_data.txt",row.name=FALSE)
+
