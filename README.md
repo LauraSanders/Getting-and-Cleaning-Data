@@ -22,3 +22,5 @@ Then only the needed/required fields are selected. In this case all the fields w
 Finally the script creates a second, tidy dataset with the average of each variable for each activity and each subject.
 Of course the Activity_Name and subject_ID are also put in the tidy dataset.
 This tidy data set is extracted and placed in a new text file in your working directory.
+
+If you open the tidy data file submitted for the course please open it using ultraedit or in Rstudio. This to be able to see that every row is on 1 line.
