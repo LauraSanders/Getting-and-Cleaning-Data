@@ -31,9 +31,10 @@ colnames(Activity_Type)<-c("Activity_ID","Activity_Name")
 #merge all data into 1 datasete
 TotalData<-cbind(X_train_test,Y_train_test,Subject_train_test)
 
+
 #Step2: Extract only the measurements on the mean and standard deviation for each measurement (including meanfreq measurements)
 
-TotalData_mean_std<-TotalData[,grep("mean|std|activity_ID|subject_ID",names(TotalData))]
+TotalData_mean_std<-TotalData[,grep("mean|Mean|std|activity_ID|subject_ID",names(TotalData))]
 
 #Step3: Uses descriptive activity names to name the activities in the data set
 
@@ -42,6 +43,9 @@ TotalData_activity<-merge(TotalData_mean_std,Activity_Type,by.x="activity_ID",by
 #Step4: Appropriately labels the data set with descriptive variable names.
 names(TotalData_activity) <- make.names(names(TotalData_activity))
 colnames(TotalData_activity)<- gsub("BodyBody","Body",names(TotalData_activity))
+colnames(TotalData_activity)<- gsub("^t","time",names(TotalData_activity))
+colnames(TotalData_activity)<- gsub("^f","frequency",names(TotalData_activity))
+colnames(TotalData_activity)<- gsub("angle.t","angle.time",names(TotalData_activity))
 
 #Step5: create a second, independent tidy data set with the average of 
 #each variable for each activity and each subject.
