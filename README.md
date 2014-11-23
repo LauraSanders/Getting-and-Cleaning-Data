@@ -19,6 +19,6 @@ The script
 =========================
 The script itself reads in the data and merges is to one file.
 Then only the needed/required fields are selected.
-Name the Activities in the data set and after that appropriately labels the data set with descriptive variable names.
+Name the Activities in the data set and after that appropriately label the data set with descriptive variable names.
 Finally the script creates a second, tidy dataset with the average of each variable for each activity and each subject.
-This tidy data set is extracted and placed in a new text file.
+This tidy data set is extracted and placed in a new text file in your working directory.
