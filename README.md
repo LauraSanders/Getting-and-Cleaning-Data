@@ -18,7 +18,7 @@ If the plyr package is not installed yet you should do it before running the scr
 The script 
 =========================
 The script itself reads in the data and merges is to one file.
-Then only the needed/required fields are selected.
-Name the Activities in the data set and after that appropriately label the data set with descriptive variable names.
+Then only the needed/required fields are selected. In this case all the fields with mean, Mean, std, subject_ID or activity_ID in the column name. Then name the Activities in the data set so it is clear what activity is done by showing a name in the variable like Walking instead of 1. Thereafter  appropriately label the data set with descriptive variable names.
 Finally the script creates a second, tidy dataset with the average of each variable for each activity and each subject.
+Of course the Activity_Name and subject_ID are also put in the tidy dataset.
 This tidy data set is extracted and placed in a new text file in your working directory.
